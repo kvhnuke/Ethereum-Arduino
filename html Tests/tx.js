@@ -113,6 +113,7 @@ var Transaction = module.exports = function (data) {
  * @return {Buffer}
  */
 Transaction.prototype.serialize = function () {
+  //console.log(ethUtil.toBuffer(this.raw).toString('hex'));
   return rlp.encode(this.raw)
 }
 
@@ -35210,6 +35211,7 @@ var util = require('./util')
  * @return {{signature: Buffer, recovery: number}}
  */
 exports.signSync = function (msg, secretKey) {
+  
   asserts.checkTypeBuffer(msg, messages.MSG32_TYPE_INVALID)
   asserts.checkBufferLength(msg, 32, messages.MSG32_LENGTH_INVALID)
 
@@ -35221,6 +35223,9 @@ exports.signSync = function (msg, secretKey) {
   }
 
   var result = ec.sign(msg, secretKey, {canonical: true})
+    console.log(msg, secretKey);
+   console.log( new Buffer(result.r.toArray(null, 32).concat(result.s.toArray(null, 32))));
+  console.log( new Buffer(result.r.toArray(null, 32).concat(result.s.toArray(null, 32))).toString('hex'));
   return {
     signature: new Buffer(result.r.toArray(null, 32).concat(result.s.toArray(null, 32))),
     recovery: result.recoveryParam
@@ -38782,12 +38787,17 @@ exports.encode = function (input) {
   if (input instanceof Array) {
     var output = []
     for (var i = 0; i < input.length; i++) {
+        console.log(toBuffer(input[i]).toString('hex'));
+        console.log(exports.encode(input[i]).toString('hex'));
       output.push(exports.encode(input[i]))
     }
     var buf = Buffer.concat(output)
+    console.log("length:",buf.length);
     return Buffer.concat([encodeLength(buf.length, 192), buf])
   } else {
     input = toBuffer(input)
+   // console.log(input.toString('hex'));
+    //console.log(input.toString('hex'));
     if (input.length === 1 && input[0] < 128) {
       return input
     } else {
@@ -38809,8 +38819,12 @@ function encodeLength (len, offset) {
     return new Buffer([len + offset])
   } else {
     var hexLength = intToHex(len)
+    console.log("hexlen",hexLength);
     var lLength = hexLength.length / 2
+    console.log("llength",lLength);
     var firstByte = intToHex(offset + 55 + lLength)
+    console.log("firstByte",firstByte);
+    console.log(firstByte + hexLength);
     return new Buffer(firstByte + hexLength, 'hex')
   }
 }

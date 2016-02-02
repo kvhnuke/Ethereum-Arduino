@@ -1,0 +1,68 @@
+# depslib dependency file v1.0
+1454388984 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\keccak.cpp
+	"keccak.h"
+
+1454388984 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\keccak.h
+	<string>
+	<stdint.h>
+
+1454401799 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\main.cpp
+	<iostream>
+	"RLP.h"
+	<string>
+	"keccak.h"
+	<memory.h>
+	"uECC.h"
+	<stdlib.h>
+
+1454398140 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\rlp.h
+	<stdio.h>
+	<string>
+	<iomanip>
+	<sstream>
+	<memory.h>
+	"TX.h"
+
+1454394253 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\tx.h
+	<string>
+
+1454398134 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\rlp.cpp
+	"RLP.h"
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\uecc.h
+	<stdint.h>
+
+1453691944 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\uecc.c
+	"uECC.h"
+	"uECC_vli.h"
+	"platform-specific.inc"
+	"asm_arm.inc"
+	"asm_avr.inc"
+	"curve-specific.inc"
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\uecc_vli.h
+	"uECC.h"
+	"types.h"
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\types.h
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\platform-specific.inc
+	"types.h"
+	<windows.h>
+	<wincrypt.h>
+	<sys/types.h>
+	<fcntl.h>
+	<unistd.h>
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\asm_arm.inc
+	"asm_arm_mult_square.inc"
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\asm_arm_mult_square.inc
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\asm_avr.inc
+	"asm_avr_mult_square.inc"
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\asm_avr_mult_square.inc
+
+1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\curve-specific.inc
+

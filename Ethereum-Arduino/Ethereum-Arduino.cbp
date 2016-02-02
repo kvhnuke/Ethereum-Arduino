@@ -38,6 +38,12 @@
 		<Unit filename="keccak.cpp" />
 		<Unit filename="keccak.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="types.h" />
+		<Unit filename="uECC.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="uECC.h" />
+		<Unit filename="uECC_vli.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
