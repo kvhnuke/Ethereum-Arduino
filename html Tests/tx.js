@@ -14,7 +14,7 @@ global.Buffer = Buffer
 global.ethUtil = ethUtil
 
 /**
- * Creates a new transaction object
+ * Creates a new transaction objectsi
  * @constructor
  * @class {Buffer|Array} data a transaction can be initiailized with either a buffer containing the RLP serialized transaction or an array of buffers relating to each of the tx Properties, listed in order below in the exmple. Or lastly an Object containing the Properties of the transaction like in the Usage example
  *
@@ -211,6 +211,7 @@ Transaction.prototype.verifySignature = function () {
  */
 Transaction.prototype.sign = function (privateKey) {
   var msgHash = this.hash(false)
+  console.log('sha', msgHash);
   var sig = ecdsa.signSync(msgHash, privateKey)
 
   this.r = sig.signature.slice(0, 32)
@@ -13168,7 +13169,7 @@ Verify.prototype.verify = function verifyMethod (key, sig, enc) {
   this.end()
   var hash = this._hash.digest()
 
-  return verify(sig, Buffer.concat([this._tag, hash]), key, this._signType)
+  return verify(sig, Buffer.concat([this._tag, hash]), key, this._Type)
 }
 
 function createSign (algorithm) {
@@ -13214,6 +13215,7 @@ var BN = require('bn.js')
 var EC = elliptic.ec
 
 function sign (hash, key, hashType, signType) {
+
   var priv = parseKeys(key)
   if (priv.curve) {
     if (signType !== 'ecdsa') throw new Error('wrong private key type')
@@ -13257,6 +13259,7 @@ function ecSign (hash, priv) {
 }
 
 function dsaSign (hash, priv, algo) {
+    
   var x = priv.params.priv_key
   var p = priv.params.p
   var q = priv.params.q
@@ -13279,6 +13282,7 @@ function dsaSign (hash, priv, algo) {
 }
 
 function toDER (r, s) {
+    
   r = r.toArray()
   s = s.toArray()
 
@@ -13298,6 +13302,7 @@ function toDER (r, s) {
 }
 
 function getKey (x, q, hash, algo) {
+    
   x = new Buffer(x.toArray())
   if (x.length < q.byteLength()) {
     var zeros = new Buffer(q.byteLength() - x.length)
@@ -13382,6 +13387,7 @@ function makeKey (q, kv, algo) {
 }
 
 function makeR (g, k, p, q) {
+    
   return g.toRed(BN.mont(p)).redPow(k).fromRed().mod(q)
 }
 
@@ -19003,6 +19009,8 @@ EC.prototype._truncateToN = function truncateToN(msg, truncOnly) {
 };
 
 EC.prototype.sign = function sign(msg, key, enc, options) {
+            console.log("test---------------------");
+        //    console.log(msg,key,enc,options);
   if (typeof enc === 'object') {
     options = enc;
     enc = null;
@@ -19035,6 +19043,7 @@ EC.prototype.sign = function sign(msg, key, enc, options) {
   var ns1 = this.n.sub(new bn(1));
   do {
     var k = new bn(drbg.generate(this.n.byteLength()));
+    console.log(k.toString(16));
     k = this._truncateToN(k, true);
     if (k.cmpn(1) <= 0 || k.cmp(ns1) >= 0)
       continue;
@@ -19231,6 +19240,7 @@ KeyPair.prototype.derive = function derive(pub) {
 
 // ECDSA
 KeyPair.prototype.sign = function sign(msg, enc, options) {
+    console.log("test");
   return this.ec.sign(msg, this, enc, options);
 };
 
@@ -35211,7 +35221,7 @@ var util = require('./util')
  * @return {{signature: Buffer, recovery: number}}
  */
 exports.signSync = function (msg, secretKey) {
-  
+    console.log(msg, secretKey);
   asserts.checkTypeBuffer(msg, messages.MSG32_TYPE_INVALID)
   asserts.checkBufferLength(msg, 32, messages.MSG32_LENGTH_INVALID)
 
@@ -35223,7 +35233,6 @@ exports.signSync = function (msg, secretKey) {
   }
 
   var result = ec.sign(msg, secretKey, {canonical: true})
-    console.log(msg, secretKey);
    console.log( new Buffer(result.r.toArray(null, 32).concat(result.s.toArray(null, 32))));
   console.log( new Buffer(result.r.toArray(null, 32).concat(result.s.toArray(null, 32))).toString('hex'));
   return {

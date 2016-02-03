@@ -229,8 +229,10 @@ Returns 1 if the signature generated successfully, 0 if an error occurred.
 int uECC_sign(const uint8_t *private_key,
               const uint8_t *message_hash,
               unsigned hash_size,
+              uint8_t *kval,
               uint8_t *signature,
-              uECC_Curve curve);
+              uECC_Curve curve,
+              uint8_t *recid);
 
 /* uECC_HashContext structure.
 This is used to pass in an arbitrary hash function to uECC_sign_deterministic().

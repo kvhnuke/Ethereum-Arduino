@@ -1160,7 +1160,8 @@ static int uECC_sign_with_k(const uint8_t *private_key,
                             unsigned hash_size,
                             uECC_word_t *k,
                             uint8_t *signature,
-                            uECC_Curve curve) {
+                            uECC_Curve curve,
+                            uint8_t *recid) {
     uECC_word_t tmp[uECC_MAX_WORDS];
     uECC_word_t s[uECC_MAX_WORDS];
     uECC_word_t *k2[2] = {tmp, s};
@@ -1197,7 +1198,7 @@ static int uECC_sign_with_k(const uint8_t *private_key,
     uECC_vli_modMult(k, k, tmp, curve->n, num_n_words); /* k = 1 / k */
 
     uECC_vli_nativeToBytes(signature, curve->num_bytes, p); /* store r */
-
+    recid[0] = p[num_words] & 0x01;
     uECC_vli_bytesToNative(tmp, private_key, BITS_TO_BYTES(curve->num_n_bits)); /* tmp = d */
     s[num_n_words - 1] = 0;
     uECC_vli_set(s, p, num_words);
@@ -1216,8 +1217,28 @@ static int uECC_sign_with_k(const uint8_t *private_key,
 int uECC_sign(const uint8_t *private_key,
               const uint8_t *message_hash,
               unsigned hash_size,
+              uint8_t *kval,
               uint8_t *signature,
-              uECC_Curve curve) {
+              uECC_Curve curve,
+              uint8_t *recid) {
+    uECC_word_t k[32];
+    uECC_word_t tries;
+
+    for (tries = 0; tries < 32; ++tries) {
+        k[tries] = kval[tries];
+    }
+        if (uECC_sign_with_k(private_key, message_hash, hash_size, k, signature, curve, recid)) {
+            return 1;
+        }
+    return 0;
+}
+
+int uECC_sign2(const uint8_t *private_key,
+              const uint8_t *message_hash,
+              unsigned hash_size,
+              uint8_t *signature,
+              uECC_Curve curve,
+              uint8_t *recid) {
     uECC_word_t k[uECC_MAX_WORDS];
     uECC_word_t tries;
 
@@ -1226,7 +1247,7 @@ int uECC_sign(const uint8_t *private_key,
             return 0;
         }
 
-        if (uECC_sign_with_k(private_key, message_hash, hash_size, k, signature, curve)) {
+        if (uECC_sign_with_k(private_key, message_hash, hash_size, k, signature, curve, recid)) {
             return 1;
         }
     }
@@ -1341,8 +1362,8 @@ int uECC_sign_deterministic(const uint8_t *private_key,
             T[num_n_words - 1] &=
                 mask >> ((bitcount_t)(num_n_words * uECC_WORD_SIZE * 8 - num_n_bits));
         }
-
-        if (uECC_sign_with_k(private_key, message_hash, hash_size, T, signature, curve)) {
+        uint8_t recid[1] = {0};
+        if (uECC_sign_with_k(private_key, message_hash, hash_size, T, signature, curve,recid)) {
             return 1;
         }
 
