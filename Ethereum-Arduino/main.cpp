@@ -1,11 +1,11 @@
 #include <iostream>
 #include "RLP.h"
 #include <string>
-#include "keccak.h"
+#include "libs/keccak.h"
 #include <memory.h>
 extern "C" {
-#include "ecdsa.h"
-#include "bignum256.h"
+    #include "libs/ecdsa.h"
+    #include "libs/bignum256.h"
 }
 uint8_t* charArrtoUint(char src[]){
     uint8_t dest[sizeof(src)];
