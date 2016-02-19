@@ -1221,12 +1221,16 @@ int uECC_sign(const uint8_t *private_key,
               uint8_t *signature,
               uECC_Curve curve,
               uint8_t *recid) {
-    uECC_word_t k[32];
-    uECC_word_t tries;
-
-    for (tries = 0; tries < 32; ++tries) {
-        k[tries] = kval[tries];
-    }
+    uECC_word_t k[4];
+    k[0] = 0;
+    k[1] = 0;
+    k[2] = 0;
+    k[3] = 1;
+   // uECC_word_t tries;
+   // printf("%d \n",curve->n);
+    //for (tries = 0; tries < 32; ++tries) {
+      //  k[tries] = kval[tries];
+    //}
         if (uECC_sign_with_k(private_key, message_hash, hash_size, k, signature, curve, recid)) {
             return 1;
         }

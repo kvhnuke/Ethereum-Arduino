@@ -211,7 +211,7 @@ Transaction.prototype.verifySignature = function () {
  */
 Transaction.prototype.sign = function (privateKey) {
   var msgHash = this.hash(false)
-  console.log('sha', msgHash);
+  console.log('sha', msgHash.toString('hex'));
   var sig = ecdsa.signSync(msgHash, privateKey)
 
   this.r = sig.signature.slice(0, 32)
@@ -19043,12 +19043,13 @@ EC.prototype.sign = function sign(msg, key, enc, options) {
   var ns1 = this.n.sub(new bn(1));
   do {
     var k = new bn(drbg.generate(this.n.byteLength()));
-    console.log(k.toString(16));
+    console.log("k val", ethUtil.toBuffer(k.toString('hex')));
     k = this._truncateToN(k, true);
     if (k.cmpn(1) <= 0 || k.cmp(ns1) >= 0)
       continue;
 
     var kp = this.g.mul(k);
+    console.log(this.g);
     if (kp.isInfinity())
       continue;
 

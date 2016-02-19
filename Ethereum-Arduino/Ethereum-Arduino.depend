@@ -6,16 +6,16 @@
 	<string>
 	<stdint.h>
 
-1454491498 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\main.cpp
+1455866465 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\main.cpp
 	<iostream>
 	"RLP.h"
 	<string>
 	"keccak.h"
 	<memory.h>
-	"uECC.h"
-	<stdlib.h>
+	"ecdsa.h"
+	"bignum256.h"
 
-1454398140 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\rlp.h
+1454760720 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\rlp.h
 	<stdio.h>
 	<string>
 	<iomanip>
@@ -26,13 +26,13 @@
 1454394253 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\tx.h
 	<string>
 
-1454398134 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\rlp.cpp
+1454761031 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\rlp.cpp
 	"RLP.h"
 
-1454491660 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\uecc.h
+1454747705 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\uecc.h
 	<stdint.h>
 
-1454491630 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\uecc.c
+1454748294 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\uecc.c
 	"uECC.h"
 	"uECC_vli.h"
 	"platform-specific.inc"
@@ -65,4 +65,715 @@
 1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\asm_avr_mult_square.inc
 
 1453691944 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\curve-specific.inc
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\include\secp256k1.h
+	<stddef.h>
+
+1454037366 source:d:\openssl-win32\include\openssl\applink.c
+	<stdio.h>
+	<io.h>
+	<fcntl.h>
+
+1446391188 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\mini-gmp.c
+	<assert.h>
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mini-gmp.h"
+
+1446391188 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\mini-gmp.h
+	<stddef.h>
+
+1443567106 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\secp256k1.c
+	"include/secp256k1.h"
+	"util.h"
+	"num_impl.h"
+	"field_impl.h"
+	"scalar_impl.h"
+	"group_impl.h"
+	"ecmult_impl.h"
+	"ecmult_const_impl.h"
+	"ecmult_gen_impl.h"
+	"ecdsa_impl.h"
+	"eckey_impl.h"
+	"hash_impl.h"
+	"modules/ecdh/main_impl.h"
+	"modules/schnorr/main_impl.h"
+	"modules/recovery/main_impl.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\util.h
+	"libsecp256k1-config.h"
+	<stdlib.h>
+	<stdint.h>
+	<stdio.h>
+
+1454683102 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\libsecp256k1-config.h
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\num_impl.h
+	"libsecp256k1-config.h"
+	"num.h"
+	"num_gmp_impl.h"
+
+1454754987 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\num.h
+	"libsecp256k1-config.h"
+	"num_gmp.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\num_gmp.h
+	<gmp.h>
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\num_gmp_impl.h
+	<string.h>
+	<stdlib.h>
+	<gmp.h>
+	"util.h"
+	"num.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\field_impl.h
+	"libsecp256k1-config.h"
+	"util.h"
+	"field_10x26_impl.h"
+	"field_5x52_impl.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\field_10x26_impl.h
+	<stdio.h>
+	<string.h>
+	"util.h"
+	"num.h"
+	"field.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\field.h
+	"libsecp256k1-config.h"
+	"field_10x26.h"
+	"field_5x52.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\field_10x26.h
+	<stdint.h>
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\field_5x52.h
+	<stdint.h>
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\field_5x52_impl.h
+	"libsecp256k1-config.h"
+	<string.h>
+	"util.h"
+	"num.h"
+	"field.h"
+	"field_5x52_asm_impl.h"
+	"field_5x52_int128_impl.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\field_5x52_asm_impl.h
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\field_5x52_int128_impl.h
+	<stdint.h>
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\scalar_impl.h
+	<string.h>
+	"group.h"
+	"scalar.h"
+	"libsecp256k1-config.h"
+	"scalar_4x64_impl.h"
+	"scalar_8x32_impl.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\group.h
+	"num.h"
+	"field.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\scalar.h
+	"num.h"
+	"libsecp256k1-config.h"
+	"scalar_4x64.h"
+	"scalar_8x32.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\scalar_4x64.h
+	<stdint.h>
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\scalar_8x32.h
+	<stdint.h>
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\scalar_4x64_impl.h
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\scalar_8x32_impl.h
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\group_impl.h
+	<string.h>
+	"num.h"
+	"field.h"
+	"group.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\ecmult_impl.h
+	"group.h"
+	"scalar.h"
+	"ecmult.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\ecmult.h
+	"num.h"
+	"group.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\ecmult_gen_impl.h
+	"scalar.h"
+	"group.h"
+	"ecmult_gen.h"
+	"hash_impl.h"
+	"ecmult_static_context.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\ecmult_gen.h
+	"scalar.h"
+	"group.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\hash_impl.h
+	"hash.h"
+	<stdlib.h>
+	<stdint.h>
+	<string.h>
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\hash.h
+	<stdlib.h>
+	<stdint.h>
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\ecdsa_impl.h
+	"scalar.h"
+	"field.h"
+	"group.h"
+	"ecmult.h"
+	"ecmult_gen.h"
+	"ecdsa.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\ecdsa.h
+	<stddef.h>
+	"scalar.h"
+	"group.h"
+	"ecmult.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\eckey_impl.h
+	"eckey.h"
+	"scalar.h"
+	"field.h"
+	"group.h"
+	"ecmult_gen.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\eckey.h
+	<stddef.h>
+	"group.h"
+	"scalar.h"
+	"ecmult.h"
+	"ecmult_gen.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\ecmult_const_impl.h
+	"scalar.h"
+	"group.h"
+	"ecmult_const.h"
+	"ecmult_impl.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\ecmult_const.h
+	"scalar.h"
+	"group.h"
+
+1443567106 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\bench_ecdh.c
+	<string.h>
+	"include/secp256k1.h"
+	"include/secp256k1_ecdh.h"
+	"util.h"
+	"bench.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\include\secp256k1_ecdh.h
+	"secp256k1.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\bench.h
+	<stdio.h>
+	<math.h>
+	"sys/time.h"
+
+1443567106 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\bench_internal.c
+	<stdio.h>
+	"include/secp256k1.h"
+	"util.h"
+	"hash_impl.h"
+	"num_impl.h"
+	"field_impl.h"
+	"group_impl.h"
+	"scalar_impl.h"
+	"ecmult_const_impl.h"
+	"ecmult_impl.h"
+	"bench.h"
+	"secp256k1.c"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\secp256k1.c
+	"include/secp256k1.h"
+	"util.h"
+	"num_impl.h"
+	"field_impl.h"
+	"scalar_impl.h"
+	"group_impl.h"
+	"ecmult_impl.h"
+	"ecmult_const_impl.h"
+	"ecmult_gen_impl.h"
+	"ecdsa_impl.h"
+	"eckey_impl.h"
+	"hash_impl.h"
+	"modules/ecdh/main_impl.h"
+	"modules/schnorr/main_impl.h"
+	"modules/recovery/main_impl.h"
+
+1443567106 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\bench_recover.c
+	"include/secp256k1.h"
+	"include/secp256k1_recovery.h"
+	"util.h"
+	"bench.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\include\secp256k1_recovery.h
+	"secp256k1.h"
+
+1443567106 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\bench_schnorr_verify.c
+	<stdio.h>
+	<string.h>
+	"include/secp256k1.h"
+	"include/secp256k1_schnorr.h"
+	"util.h"
+	"bench.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\include\secp256k1_schnorr.h
+	"secp256k1.h"
+
+1443567106 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\bench_sign.c
+	"include/secp256k1.h"
+	"util.h"
+	"bench.h"
+
+1443567106 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\bench_verify.c
+	<stdio.h>
+	<string.h>
+	"include/secp256k1.h"
+	"util.h"
+	"bench.h"
+
+1443567106 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\gen_context.c
+	"basic-config.h"
+	"include/secp256k1.h"
+	"field_impl.h"
+	"scalar_impl.h"
+	"group_impl.h"
+	"ecmult_gen_impl.h"
+
+1443567106 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\secp256k1\basic-config.h
+
+1454758124 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\ecdsa.h
+	"common.h"
+	"bignum256.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\common.h
+	<stddef.h>
+	<stdint.h>
+	<stdbool.h>
+	<string.h>
+	<avr/io.h>
+	<avr/pgmspace.h>
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\bignum256.h
+	"common.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\aes.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"common.h"
+	"aes.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\test_helpers.h
+	<stdio.h>
+	"common.h"
+	"bignum256.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\aes.h
+	"common.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\baseconv.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"common.h"
+	"endian.h"
+	"baseconv.h"
+	"bignum256.h"
+	"sha256.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\endian.h
+	"common.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\baseconv.h
+	"common.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\sha256.h
+	"common.h"
+	"hash.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\hash.h
+	"common.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\bignum256.c
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<gmp.h>
+	"endian.h"
+	"test_helpers.h"
+	"common.h"
+	"bignum256.h"
+
+1454756660 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\bip32.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"common.h"
+	"bignum256.h"
+	"bip32.h"
+	"hmac_sha512.h"
+	"endian.h"
+	"ecdsa.h"
+	"hwinterface.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\bip32.h
+	"common.h"
+	"bignum256.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\hmac_sha512.h
+	"common.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\hwinterface.h
+	"common.h"
+
+1454758443 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\ecdsa.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"test_helpers.h"
+	"common.h"
+	"bignum256.h"
+	"ecdsa.h"
+	"endian.h"
+	"hmac_drbg.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\hmac_drbg.h
+	"common.h"
+	"sha256.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\endian.c
+	"common.h"
+	"endian.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\fft.c
+	"common.h"
+	"fix16.h"
+	"fft.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\fix16.h
+	"common.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\fft.h
+	"common.h"
+	"fix16.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\fix16.c
+	"common.h"
+	"fix16.h"
+	"int64.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\int64.h
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\hash.c
+	"common.h"
+	"hash.h"
+	"endian.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\hmac_drbg.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"common.h"
+	"sha256.h"
+	"hmac_drbg.h"
+	"test_helpers.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\hmac_sha512.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"common.h"
+	"endian.h"
+	"hmac_sha512.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\messages.pb.c
+	"messages.pb.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\messages.pb.h
+	"pb.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\pb.h
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+	<string.h>
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\pb_decode.c
+	"pb.h"
+	"pb_decode.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\pb_decode.h
+	"pb.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\pb_encode.c
+	"pb.h"
+	"pb_encode.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\pb_encode.h
+	"pb.h"
+
+1454756716 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\pbkdf2.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"common.h"
+	"hmac_sha512.h"
+	"endian.h"
+	"hwinterface.h"
+	"pbkdf2.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\pbkdf2.h
+	"common.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\prandom.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"common.h"
+	"aes.h"
+	"sha256.h"
+	"ripemd160.h"
+	"hmac_sha512.h"
+	"endian.h"
+	"ecdsa.h"
+	"bignum256.h"
+	"transaction.h"
+	"prandom.h"
+	"hwinterface.h"
+	"storage_common.h"
+	"test_helpers.h"
+	"wallet.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\ripemd160.h
+	"common.h"
+	"hash.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\transaction.h
+	"common.h"
+	"bignum256.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\prandom.h
+	"common.h"
+	"bignum256.h"
+	"storage_common.h"
+	"ecdsa.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\storage_common.h
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\wallet.h
+	"common.h"
+	"ecdsa.h"
+	"hwinterface.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\ripemd160.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"common.h"
+	"hash.h"
+	"ripemd160.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\sha256.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"common.h"
+	"hash.h"
+	"sha256.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\statistics.c
+	"common.h"
+	"fix16.h"
+	"fft.h"
+	"statistics.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\statistics.h
+	"common.h"
+	"fix16.h"
+	"fft.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\stream_comm.c
+	<stdio.h>
+	<assert.h>
+	<string.h>
+	<stdlib.h>
+	"common.h"
+	"endian.h"
+	"hwinterface.h"
+	"wallet.h"
+	"bignum256.h"
+	"stream_comm.h"
+	"prandom.h"
+	"xex.h"
+	"ecdsa.h"
+	"storage_common.h"
+	"pb.h"
+	"pb_decode.h"
+	"pb_encode.h"
+	"messages.pb.h"
+	"sha256.h"
+	"transaction.h"
+	"test_helpers.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\stream_comm.h
+	"common.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\xex.h
+	"common.h"
+	"hwinterface.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\test_helpers.c
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	"test_helpers.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\transaction.c
+	<stdlib.h>
+	<stdio.h>
+	"test_helpers.h"
+	"stream_comm.h"
+	"wallet.h"
+	"common.h"
+	"endian.h"
+	"ecdsa.h"
+	"baseconv.h"
+	"sha256.h"
+	"bignum256.h"
+	"prandom.h"
+	"hwinterface.h"
+	"transaction.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\wallet.c
+	<stdlib.h>
+	<stdio.h>
+	<assert.h>
+	"test_helpers.h"
+	<stddef.h>
+	"common.h"
+	"endian.h"
+	"wallet.h"
+	"prandom.h"
+	"sha256.h"
+	"ripemd160.h"
+	"ecdsa.h"
+	"hwinterface.h"
+	"xex.h"
+	"bignum256.h"
+	"storage_common.h"
+	"hmac_sha512.h"
+	"pbkdf2.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\signing\xex.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"wallet.h"
+	"common.h"
+	"aes.h"
+	"prandom.h"
+	"hwinterface.h"
+	"endian.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\bignum256.c
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<gmp.h>
+	"endian.h"
+	"test_helpers.h"
+	"common.h"
+	"bignum256.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\endian.h
+	"common.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\common.h
+	<stddef.h>
+	<stdint.h>
+	<stdbool.h>
+	<string.h>
+	<avr/io.h>
+	<avr/pgmspace.h>
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\bignum256.h
+	"common.h"
+
+1455869530 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\ecdsa.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"test_helpers.h"
+	"common.h"
+	"bignum256.h"
+	"ecdsa.h"
+	"endian.h"
+	"hmac_drbg.h"
+
+1454792695 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\ecdsa.h
+	"common.h"
+	"bignum256.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\hmac_drbg.h
+	"common.h"
+	"sha256.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\sha256.h
+	"common.h"
+	"hash.h"
+
+1428803654 c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\hash.h
+	"common.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\endian.c
+	"common.h"
+	"endian.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\hash.c
+	"common.h"
+	"hash.h"
+	"endian.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\hmac_drbg.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"common.h"
+	"sha256.h"
+	"hmac_drbg.h"
+	"test_helpers.h"
+
+1428803654 source:c:\users\kosala\documents\github\ethereum-arduino\ethereum-arduino\sha256.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"test_helpers.h"
+	"common.h"
+	"hash.h"
+	"sha256.h"
 

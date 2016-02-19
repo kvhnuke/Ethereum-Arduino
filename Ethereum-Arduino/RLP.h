@@ -22,6 +22,7 @@ class RLP
   	std::string hexToBytes(std::string);
   	int char2int(char);
   	void hex2bin(const char*, char*);
+  	void testPub();
 
   private:
 
